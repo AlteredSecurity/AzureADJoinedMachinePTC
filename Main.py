@@ -416,8 +416,9 @@ if __name__ == '__main__':
     parser.add_argument('--usercert',  help='Valid AzureAD certificate (PFX format).', required=True)
     parser.add_argument('--certpass',  help='PFX password.', required=True)
     parser.add_argument('--remoteip', help='IP or name of the remote client.', required=True)
+    parser.add_argument('--command', help='Enter command to execute on the remote machine.', required=True)
 
     args = parser.parse_args()
 
-    executer = PSEXEC('cmd.exe', userCert=args.usercert, certPass=args.certpass)
+    executer = PSEXEC(args.command, userCert=args.usercert, certPass=args.certpass)
     executer.run(args.remoteip)

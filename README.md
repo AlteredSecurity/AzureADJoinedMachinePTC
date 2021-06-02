@@ -1,4 +1,6 @@
-# AzureADJoinedMachine
+# AzureADJoinedMachinePTC
+
+A tool to execute Pass-The-Certificate attack for lateral movement between Azure AD joined machines.
 
 ## Requirements
 
